@@ -3,7 +3,7 @@
 #
 
 PYVENV ?= pyvenv-3.4
-IPYTHONDIR ?= $(shell pwd)/lib/ipython
+IPYTHONDIR ?= (shell python -c 'import os; print (os.path.abspath("lib/ipython"))')
 
 IPYTHON = ipython
 
@@ -48,9 +48,12 @@ ${EXT_DIR}/livereveal: ${DOWNLOAD_DIR}/live_reveal-master.zip
 	# ${IPYTHON} live_reveal-master/Install_RJSE.ipynb ${DIR_FLAG}
 	#${IPYTHON_INSTALL} tmp/live_reveal-master/livereveal ${DIR_FLAG}
 	cd tmp/live_reveal-master && IPYTHONDIR=${IPYTHONDIR} python setup.py install
-	rm -r live_reveal-master
+	rm -r tmp/live_reveal-master
 
 
 
 run:
 	${IPYTHON} notebook ${DIR_FLAG} --notebook-dir=notebooks
+
+
+
