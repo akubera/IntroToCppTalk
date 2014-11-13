@@ -3,7 +3,7 @@
 #
 
 PYVENV ?= pyvenv-3.4
-IPYTHONDIR ?= (shell python -c 'import os; print (os.path.abspath("lib/ipython"))')
+IPYTHONDIR ?= $(shell python -c 'import os; print (os.path.abspath("lib/ipython"))')
 
 IPYTHON = ipython
 
