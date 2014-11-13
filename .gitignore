@@ -3,7 +3,9 @@
 /lib
 /include
 /share
+/tmp
 
 /pyvenv.cfg
 
 __pycache__
+
