@@ -53,7 +53,7 @@ ${EXT_DIR}/livereveal: ${DOWNLOAD_DIR}/live_reveal-master.zip
 
 
 run:
-	${IPYTHON} notebook ${DIR_FLAG} --notebook-dir=notebooks
+	${IPYTHON} notebook ${DIR_FLAG} --notebook-dir=notebooks --matplotlib
 
 
 
